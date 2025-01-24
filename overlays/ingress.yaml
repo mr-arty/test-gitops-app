@@ -5,14 +5,14 @@ metadata:
     annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-    ingressClassName: nginx
-    rules:
-    - http:
-        paths:
-        - path: /caddy
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /caddy
         pathType: Prefix
         backend:
-            service:
+          service:
             name: caddy-service
             port:
-                name: http
+              name: http
