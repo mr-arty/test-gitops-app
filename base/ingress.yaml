@@ -8,10 +8,10 @@ spec:
   - host: "localhost"
     http:
       paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: caddy-service
-              port:
-                name: http
+      - backend:
+          service:
+            name: caddy-service
+            port:
+              name: http
+        path: /
+        pathType: Prefix
